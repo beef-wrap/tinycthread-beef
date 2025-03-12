@@ -1,0 +1,9 @@
+FileVersion = 1
+
+[Project]
+Name = "tinycthread-beef"
+DefaultNamespace = "tinycthread"
+
+[Configs.Debug.Win64]
+CLibType = "DynamicDebug"
+LibPaths = ["$(ProjectDir)\\libs\\tinycthread.lib"]
