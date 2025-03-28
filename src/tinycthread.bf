@@ -55,7 +55,7 @@ public static class tinycthread
 	* tinycthread.h.
 	*/
 
-	public struct timespec { };
+	public struct timespec { }
 
 	[CLink] public static extern int _tthread_timespec_get(timespec* ts, int base_);
 
@@ -115,7 +115,7 @@ public static class tinycthread
 	public const c_int mtx_recursive = 2;
 
 	/* Mutex */
-	public struct mtx_t { };
+	public struct mtx_t { }
 
 	/** Create a mutex object.
 	* @param mtx A mutex object.
@@ -173,7 +173,7 @@ public static class tinycthread
 	[CLink] public static extern int mtx_unlock(mtx_t* mtx);
 
 	/* Condition variable */
-	public struct cnd_t { };
+	public struct cnd_t { }
 
 	/** Create a condition variable object.
 	* @param cond A condition variable object.
@@ -268,7 +268,7 @@ public static class tinycthread
 	/** Identify the calling thread.
 	* @return The identifier of the calling thread.
 	*/
-	[CLink] public static extern thrd_t thrd_current(void);
+	[CLink] public static extern thrd_t thrd_current();
 
 	/** Dispose of any resources allocated to the thread when that thread exits.
 	* @return thrd_success, or thrd_error on error
@@ -315,7 +315,7 @@ public static class tinycthread
 	* Permit other threads to run, even if the current thread would ordinarily
 	* continue to run.
 	*/
-	[CLink] public static extern void thrd_yield(void);
+	[CLink] public static extern void thrd_yield();
 
 	/* Thread local storage */
 	public struct tss_t;

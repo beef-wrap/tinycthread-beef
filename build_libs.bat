@@ -1,8 +1,16 @@
+mkdir libs
+mkdir libs\debug
+mkdir libs\release
+
 cd tinycthread
 mkdir build
 cd build
+
 cmake ..
+
 cmake --build .
-cd ../..
-move .\tinycthread\build\Debug\tinycthread.lib libs
-move .\tinycthread\build\Debug\tinycthread.pdb libs
+copy .\Debug\tinycthread.lib ..\..\libs\debug
+copy .\Debug\tinycthread.pdb ..\..\libs\debug
+
+cmake --build . --config=Release
+copy .\Release\tinycthread.lib ..\..\libs\release

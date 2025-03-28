@@ -27,6 +27,7 @@ static class Program
 		{
 			/* Wait for the thread to finish */
 			thrd_join(t, null);
+			Debug.WriteLine("here");
 		}
 
 		return 0;
